@@ -19,35 +19,10 @@
                 &nbsp;
             </div>
             <div class="row">
-                <div class="span6">
-                    <img src = '/static/img/annkpx.png' class = 'logo' />
                 
-                    <br /><br />
-
-                        
-                    <div class="well">
-                        <ul class="tag-cloud">
-                        {% for t in tags %}
-                            <li><a class="tag-size-4" href='/tag/{{ t.slug }}'>{{ t }}</a></li>
-                        {% endfor %}
-                        </ul>
-                    </div>
-                    
-                    <div>
-   <a class="twitter-timeline" data-dnt=true href="https://twitter.com/kpx13" data-widget-id="276785414629638144">Tweets by @kpx13</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-                    </div>
-                    
-                    <div class="hero-unit">
-                        {{ contacts|safe }}
-                    </div>
-                    
-<!--                     <img src = '/static/img/ann_.png' class = 'photo' style='height: 400px; transparent: 0.3; margin-top: -200px; margin-bottom: -250px;' />  -->
-                </div>
-            
                 
-                <div class="span6">
+                <div class="span8">
+                <img src = '/static/img/annkpx.png' style='width: 400px' />
                     {% for a in articles %}
                         <div>
                             <h4>{{ a.name }}{% for t in a.tags.all %} <a href='/tag/{{ t.slug }}'><span class="label">  {{ t }}  </span></a> {% endfor %}   </h4>
@@ -59,6 +34,37 @@
                         </div>
                     {% endfor %}
                 </div>
+                
+                <div class="span4">
+                    
+                
+                    <br /><br />
+
+                        
+                    
+                    
+                   
+                    <img src = '/static/img/ann_1.png' class = 'photo' style='height: 400px; margin-top: -40px; margin-bottom: -20px;' /> 
+                    <div class="well" style="background-color: #ade0ba; border: 1px solid #a0c0b0;">
+                        {{ contacts|safe }}
+                    </div>
+                    
+                    <div class="well">
+                        <ul class="tag-cloud">
+                        {% for t in tags %}
+                            <li><a class="tag-size-1" href='/tag/{{ t.slug }}'>{{ t }}</a></li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    
+                      <div>
+   <a class="twitter-timeline" data-dnt=true href="https://twitter.com/kpx13" data-widget-id="276785414629638144">Tweets by @kpx13</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+                    </div>
+                </div>
+            
+                
             </div>
             
             <hr />
