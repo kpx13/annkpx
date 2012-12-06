@@ -27,7 +27,7 @@
                         <div>
                             <h3>{{ a.name }}{% for t in a.tags.all %} <a href='/tag/{{ t.slug }}'><span class="label">  {{ t }}  </span></a> {% endfor %}   </h3>
                                     
-                            {{ a.cutted|safe }} ... <a href="/article/{{ a.id }}">Далее &raquo;</a><br />
+                            {{ a.cutted|safe }} ... <a href="/article/{{ a.id }}">Далее&nbsp;&raquo;</a><br />
                             <span><b>{{ a.date }}</b></span>
                             
                             {% if not forloop.last %} <hr /> {% endif %}
@@ -58,8 +58,8 @@
                     </div>
                     
                       <div>
-<!--   <a class="twitter-timeline" data-dnt=true href="https://twitter.com/kpx13" data-widget-id="276785414629638144">Tweets by @kpx13</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>-->
+  <a class="twitter-timeline" data-dnt=true href="https://twitter.com/kpx13" data-widget-id="276785414629638144">Tweets by @kpx13</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
                     </div>
                 </div>
