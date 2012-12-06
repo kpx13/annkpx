@@ -4,76 +4,70 @@
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <title>annkpx</title>
+        
         <link href="/static/css/bootstrap.css" type="text/css" rel="stylesheet">
         <link href="/static/css/style.css" type="text/css" rel="stylesheet">
+        <script src="/static/js/jquery.js"></script>
         <script src="/static/bootstrap/js/bootstrap.js"></script>
 
     </head>
         
     <body>
         
- <div class="container">
-        <div class="row">
-            &nbsp;
-        </div>
-        <div class="row">
-        <div class="span6">
-        <img src = '/static/img/annkpx.png' class = 'logo' />
-        <!--
-            <div class = 'nav nav-pills'>
-                <li><a href='#'>python/django dev</a></li>
-                <li class='active' ><a href='#'>обо всем</a></li>
-                <li><a href='#'>лучшее</a></li>
-            </div>-->
-        
-            <br /><br />
-      
+        <div class="container">
+            <div class="row">
+                &nbsp;
+            </div>
+            <div class="row">
+                <div class="span6">
+                    <img src = '/static/img/annkpx.png' class = 'logo' />
                 
-                
-                     <div class="well">
+                    <br /><br />
+
+                        
+                    <div class="well">
                         <ul class="tag-cloud">
                         {% for t in tags %}
                             <li><a class="tag-size-4" href='/tag/{{ t.slug }}'>{{ t }}</a></li>
                         {% endfor %}
                         </ul>
-                    
-                </div>
-                    <div class="hero-unit">
-                        <p>Здесь будет лента из твитера.</p>
                     </div>
-            <div>
-           
-        </div>
-           
-       </div>
-       <div class="span6">
-        {% for a in articles %}
-            <div>
-                <h4>{{ a.name }}{% for t in a.tags.all %} <a href='/tag/{{ t.slug }}'><span class="label">  {{ t }}  </span></a> {% endfor %}   </h4>
-                           
-                {{ a.cutted|safe }} ... <a class="btn btn-small btn-info" href="/article/{{ a.id }}">Далее &raquo;</a><br />
-                <span><b>{{ a.date }}</b></span>
-                
-                {% if not forloop.last %} <hr /> {% endif %}
-            </div>
-        {% endfor %}
-       
-                <div class="hero-unit">
-                    {{ contacts|safe }}
+                    
+                    <div class="hero-unit">
+   <a class="twitter-timeline" data-dnt=true href="https://twitter.com/kpx13" data-widget-id="276785414629638144">Tweets by @kpx13</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+                    </div>
+                    
+                    <div class="hero-unit">
+                        {{ contacts|safe }}
+                    </div>
+                    
+<!--                     <img src = '/static/img/ann_.png' class = 'photo' style='height: 400px; transparent: 0.3; margin-top: -200px; margin-bottom: -250px;' />  -->
                 </div>
-                <img src = '/static/img/ann_.png' class = 'photo' style='height: 400px; float: right; transparent: 0.3; margin-top: -200px; margin-bottom: -250px;' /> 
-          
-       </div>
-      </div>
-
-      <hr>
-
-      <footer>
-        <p>&copy; krx family 2012</p>
-      </footer>
-
+            
+                
+                <div class="span6">
+                    {% for a in articles %}
+                        <div>
+                            <h4>{{ a.name }}{% for t in a.tags.all %} <a href='/tag/{{ t.slug }}'><span class="label">  {{ t }}  </span></a> {% endfor %}   </h4>
+                                    
+                            {{ a.cutted|safe }} ... <a class="btn btn-small btn-info" href="/article/{{ a.id }}">Далее &raquo;</a><br />
+                            <span><b>{{ a.date }}</b></span>
+                            
+                            {% if not forloop.last %} <hr /> {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
             
+            <hr />
+            <footer>
+                <p>&copy; krx family 2012</p>
+            </footer>
+        </div>
 
+        
+                    
     </body>
 </html>  
