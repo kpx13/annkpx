@@ -1,4 +1,3 @@
-/* @import url(http://fonts.googleapis.com/css?family=Lobster); */
 /*!
  * Bootstrap v2.2.1
  *
@@ -148,7 +147,7 @@ body {
   font-family: Lobster;
   font-size: 14px;
   line-height: 20px;
-  color: #808080;
+  color: #606060;
   background-color: #f5f7cd;
 }
 a {
