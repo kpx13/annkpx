@@ -39,6 +39,15 @@ def calendar_page(request, cur_date=None):
         c['date'] = cur_date.strftime('%d.%m.%Y')
     return render_to_response('calendar.html', c, context_instance=RequestContext(request))
 
+def article_page(request, art_slug):
+    c = get_common_context(request)
+    try:
+        c['a'] = Article.get_by_slug(art_slug)
+        return render_to_response('article.html', c, context_instance=RequestContext(request))
+    except:
+        raise Http404()
+
+
 def other_page(request, page_name):
     c = get_common_context(request)
     try:

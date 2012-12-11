@@ -3,12 +3,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru-ru" lang="ru-ru">
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <title>annkpx</title>
+        <title>{% block title %}AnnKpx | Личный сайт{% endblock %}</title>
         
         <link href="/static/css/bootstrap.css" type="text/css" rel="stylesheet">
         <link href="/static/css/style.css" type="text/css" rel="stylesheet">
         <script src="/static/js/jquery.js"></script>
         <script src="/static/bootstrap/js/bootstrap.js"></script>
+        {% block extended_head %}
+        {% endblock %}
 
     </head>
         
@@ -18,54 +20,9 @@
             <div class="row">
                 &nbsp;
             </div>
-            <div class="row">
-                
-                
-                <div class="span8">
-                <img src = '/static/img/annkpx.png' style='width: 400px' />
-                    {% for a in articles %}
-                        <div>
-                            <h3>{{ a.name }}{% for t in a.tags.all %} <a href='/tag/{{ t.slug }}'><span class="label">  {{ t }}  </span></a> {% endfor %}   </h3>
-                                    
-                            {{ a.cutted|safe }} ... <a href="/article/{{ a.id }}">Далее&nbsp;&raquo;</a><br />
-                            <span><b>{{ a.date }}</b></span>
-                            
-                            {% if not forloop.last %} <hr /> {% endif %}
-                        </div>
-                    {% endfor %}
-                </div>
-                
-                <div class="span4">
-                    
-                
-                    <br /><br />
+            {% block content %}
 
-                        
-                    
-                    
-                   
-                    <img src = '/static/img/ann_1.png' class = 'photo' style='height: 400px; margin-top: -40px; margin-bottom: -20px;' /> 
-                    <div class="well" style="background-color: #ade0ba; border: 1px solid #a0c0b0;">
-                        {{ contacts|safe }}
-                    </div>
-                    
-                    <div class="well">
-                        <ul class="tag-cloud">
-                        {% for t in tags %}
-                            <li><a class="tag-size-1" href='/tag/{{ t.slug }}'>{{ t }}</a></li>
-                        {% endfor %}
-                        </ul>
-                    </div>
-                    
-                      <div>
-  <a class="twitter-timeline" data-dnt=true href="https://twitter.com/kpx13" data-widget-id="276785414629638144">Tweets by @kpx13</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-                    </div>
-                </div>
-            
-                
-            </div>
+            {% endblock %}
             
             <hr />
             <footer>

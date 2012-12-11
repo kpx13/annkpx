@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 from ckeditor.fields import RichTextField
+import pytils
 from taggit.managers import TaggableManager
 from taggit.models import Tag, TaggedItem
+
 
 class ArticleTag(Tag):
     class Meta:
@@ -24,6 +26,7 @@ class ArticleTaggedItem(TaggedItem):
 
 class Article(models.Model):
     name = models.CharField(max_length=128, verbose_name=u'название')
+    slug = models.SlugField(verbose_name=u'slug', unique=True, blank=True)
     date = models.DateField(verbose_name=u'дата')
     text = RichTextField(verbose_name=u'текст')
     tags = TaggableManager(through=ArticleTaggedItem)
@@ -35,6 +38,14 @@ class Article(models.Model):
     
     def __unicode__(self):
         return self.name
+    
+    def save(self, *args, **kwargs):
+        self.slug=pytils.translit.slugify(self.name)
+        super(Article, self).save(*args, **kwargs)
+        
+    @staticmethod
+    def get_by_slug(slug):
+        return Article.objects.get(slug=slug)
     
     @staticmethod
     def get_recent(count=4):
