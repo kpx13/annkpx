@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 from django.db import models
-from ckeditor.fields import RichTextField
 
 class Page(models.Model):
     slug = models.SlugField(verbose_name=u'название', unique=True)
     title = models.CharField(max_length=256, verbose_name=u'заголовок')
-    content = RichTextField(blank=True, verbose_name=u'html-содержимое')
+    content = models.TextField(blank=True, verbose_name=u'html-содержимое')
     header_content = models.TextField(blank=True, verbose_name=u'html-содержимое head')
     
     @classmethod

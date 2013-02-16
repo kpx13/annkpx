@@ -11,3 +11,5 @@ h1, h2, h3, h4, h5, h6 {font-family: 'Lobster', cursive !important; color: #7070
 .tag-cloud li .tag-size-3{font-size:22px}
 .tag-cloud li .tag-size-4{font-size:24px}
 .tag-cloud li .tag-size-5{font-size:26px}
+
+.well a {color:  #55f}

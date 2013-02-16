@@ -18,9 +18,11 @@ def get_common_context(request):
 def home_page(request):
     c = get_common_context(request)
     c['request_url'] = 'home'
-    c['tags'] = ArticleTag.objects.all()
-    c['articles'] = Article.get_recent(15)
-    c['contacts'] = Page.get_page_by_slug('home_contacts')['content']
+    c['articles'] = Article.get_recent(10)
+    c['home_who'] = Page.get_page_by_slug('home_who')['content']
+    c['home_where'] = Page.get_page_by_slug('home_where')['content']
+    c['home_from'] = Page.get_page_by_slug('home_from')['content']
+    c['home_reason'] = Page.get_page_by_slug('home_reason')['content']
     return render_to_response('home.html', c, context_instance=RequestContext(request))
 
 def archives_page(request, tag=None):
