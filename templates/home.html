@@ -2,6 +2,54 @@
 
 {% block content %}
 <div class="row">
+    <div class="span6" style='height: 580px'>
+        <div style='height: 400px; margin-top: 0px; margin-bottom: -20px;' >
+            <img src = '/static/img/ann_1.png' class = 'photo' /> 
+            <h1 style='height: 25px; margin-top: -55px; text-align: right;'>Кто Я?</h1>
+        </div>
+        <div class="well" style="background-color: #ade0ba; border: 1px solid #a0c0b0; height: 250px">
+<!--              -->
+            {{ contacts|safe }}
+        </div>
+  
+    </div>
+    
+    <div class="span6" style='' >
+         <h1 style='height: 25px; text-align: right;'>Куда Я иду?</h1>
+         <div class="well" style='background-color: #ade0ba; border: 1px solid #a0c0b0; height: 585px;' >
+          <div>asdflkj</div>
+         </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="span6">
+    <h1 style='height: 25px; text-align: right;'>С какого Я района?</h1>
+        <div class="well" style="background-color: #ade0ba; border: 1px solid #a0c0b0; height: 250px">
+            <ul class="tag-cloud">
+
+            </ul>
+        </div>
+    </div>
+    
+    <div class="span6">
+    <h1 style='height: 25px; text-align: right;'>И в чем смысл жизни?</h1>
+        <div class="well" style="background-color: #ade0ba; border: 1px solid #a0c0b0; height: 250px">
+            <ul class="tag-cloud">
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+       
+
+{% endblock %}
+
+{% block content_ %}
+<div class="row">
     <div class="span8">
     <img src = '/static/img/annkpx.png' style='width: 400px' />
         {% for a in articles %}
@@ -34,7 +82,8 @@
             </ul>
         </div>
         
-            <div>
+        
+        <div>
 <a class="twitter-timeline" data-dnt=true href="https://twitter.com/kpx13" data-widget-id="276785414629638144">Tweets by @kpx13</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
