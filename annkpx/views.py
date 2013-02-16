@@ -19,7 +19,7 @@ def home_page(request):
     c = get_common_context(request)
     c['request_url'] = 'home'
     c['tags'] = ArticleTag.objects.all()
-    c['articles'] = Article.get_recent(4)
+    c['articles'] = Article.get_recent(15)
     c['contacts'] = Page.get_page_by_slug('home_contacts')['content']
     return render_to_response('home.html', c, context_instance=RequestContext(request))
 
