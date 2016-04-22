@@ -1,49 +1,286 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html class=" js no-touch csstransforms csstransforms3d csstransitions svg js-ready">
+    <head lang="en-US">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Meta Tags -->
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <meta name="viewport" content="width=device-width">
+<!--Shortcut icon-->
+        <title>ANNKPX</title>
 
-{% block content %}
-<div class="row">
-    <div class="span6" style='height: 580px'>
-        <div style='height: 400px; margin-top: 0px; margin-bottom: -30px;' >
-            <img src = '/static/img/ann_1.png' class = 'photo' /> 
-            <h1 style='height: 25px; margin-top: -65px; text-align: right;'>Кто Я?</h1>
+        <link rel="stylesheet" id="rs-settings-css" href="/static/css/settings.css" type="text/css" media="all">
+        <link rel="stylesheet" id="rs-captions-css" href="/static/css/captions.css" type="text/css" media="all">
+        <link rel="stylesheet" id="rgs-css" href="/static/css/rgs.css" type="text/css" media="all">
+        <link rel="stylesheet" id="responsive-css" href="/static/css/responsive.css" type="text/css" media="all">
+        <link rel="stylesheet" id="font-awesome-css" href="/static/css/font-awesome.min.css" type="text/css" media="all">
+        <link rel="stylesheet" id="main-styles-css" href="/static/css/style.css" type="text/css" media="all">
+        <!--[if lt IE 9]>
+        <link rel='stylesheet' id='ie8-css'  href='/static/css/ie8.css?ver=3.5.2' type='text/css' media='all' />
+        <![endif]-->
+        <link rel="stylesheet" id="dynamic_colors-css" href="/static/css/colors.css" type="text/css" media="all">
+        <link rel="stylesheet" id="dynamic_colors-css" href="/static/css/fonts.css" type="text/css" media="all">
+        <link rel="stylesheet" id="custom_css-css" href="/static/css/custom.css" type="text/css" media="all">
+        <script type="text/javascript" src="/static/js/jquery.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.themepunch.plugins.min.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.themepunch.revolution.min.js"></script>
+        <script type="text/javascript" src="/static/js/modernizr.js"></script>
+        <script type="text/javascript" src="/static/js/comment-reply.min.js"></script>
+        <link rel="canonical" href="#">
+	</head>
+
+<body class="">
+
+    <div class="v-wrap">
+
+       <div class="v-header-top" style="background-image: url(/static/images/other/me.png); background-color: rgb(237, 125, 103); ">
+           <div class="v-header-top-content">
+                <h1><img src='/static/wallp/logo.png' style='height: 250px' /></h1>
+<!--                 <h1 style="color:#cd0000"><img src='/static/wallp/logo_s.png' style='height: 100px' />ANNKPX</h1> -->
+                <p style="color:#fff">Анна Крханбарова</p>
+                
+            </div>
         </div>
-        <div class="well" style="background-color: #ade0ba; border: 1px solid #a0c0b0; height: 260px">
-<!--              -->
-            {{ home_who|safe }}
-        </div>
-  
-    </div>
     
-    <div class="span6" style='' >
-         <h1 style='height: 25px; text-align: right;'>Куда Я иду?</h1>
-         <div class="well" style='background-color: #ade0ba; border: 1px solid #a0c0b0; height: 585px;' >
-          {{ home_where|safe }}
-         </div>
-    </div>
-</div>
+        <div id="v-header" class="v-header">
+            <div class="sticky-wrapper">
+                <div id="v-header-outer" data-padding="18">
+                    <header id="top">
+                        <div class="container" style=''>
+                            <div class="row" style=' '>
+				
+                                <div class="col span_3">
+                                    <a id="logo" href="/static/index.htm" style=''>
+                                        <img src='/static/wallp/logo_s.png' style='height: 40px; margin-top: -5px; padding-right: 5px; float: left' /> ANNKPX
+                                    </a>
+                                </div><!--/span_3-->
+				
+                                <div class="col span_9 col_last">
+                                    
+                                    <a class="nav-btn" id="nav-open-btn" href="/static/#nav"><i class="icon-reorder"></i></a>
+                                    
+                                    <nav>
+                                        <ul class="sf-menu">	
+                                            
+                                            <li class="menu-item page_item">
+                                                <a href="#">Главная</a>
+                                            </li>
+                                            
+                                            <li class="menu-item page_item">
+                                                <a href="#">Рекомендую</a>
+                                            </li>
+                                            
+                                            <li class="menu-item page_item">
+                                                <a href="/static/blog.htm">Блог</a>
+                                                <ul class="sub-menu">
+                                                    <li class="menu-item">
+                                                        <a href="/static/single_post.htm">Post Example</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            
+                                            <li class="menu-item page_item">
+                                                <a href="#">Обо мне</a>
+                                            </li>
+                                            
+                                            <li class="menu-item page_item">
+                                                <a href="#">Контакты</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div><!--/span_9-->
+                            </div><!--/row-->
+                        </div><!--/container-->
+                    </header>
+                </div>
+            </div><!--/v-header-outer-->
+        <!--/header-->
+		
 
+            <div class="home-wrap">
 
-<div class="row">
-    <div class="span6">
-    <h1 style='height: 25px; text-align: right;'>С какого Я района?</h1>
-        <div class="well" style="background-color: #ade0ba; border: 1px solid #a0c0b0; height: 250px">
-            {{ home_from|safe }}
-        </div>
-    </div>
+                <div class="container">
+                    
+                    <div class="row">
+                        
+                        {% for b in content %}
+                            <div class="divider" style="{{ b.divider }}">
+                                <div class="clear"></div>
+                                {{ b.content|safe }}
+                            </div>
+                        {% endfor %}
+
+                        
+                         <div class="divider" style="background-color:#f6f6f6;background-image:url();background-attachment:;text-align: ;padding-bottom: px !important;">
+                            <div class="clear"></div>
+        
+                            <div class="container"> 
+                                <div class="row">
+                        
+                                    <div class="col span_4">
+                                        <h2>Как :</h2>
+                                    <p>Veggies sunt bona vobis, proinde vos postulo esse magis pea turnip sweet pepper okra courgette.Veggies sunt bona vobis, proinde vos postulo esse magis pea turnip sweet pepper okra courgette.Veggies sunt bona vobis, proinde vos postulo esse magis pea turnip sweet pepper okra courgette.Veggies sunt bona vobis, proinde vos postulo esse magis pea turnip sweet pepper okra courgette.<br />
+                                    <b>Address</b>: XXX, XXXX, XXX<br />
+                                    <b>Phone</b>: +123 123 1234<br />
+                                    <b>Email</b>: xxx@xxx.com</p>
+                                    </div> 
+
+                                    <div class="col span_8">
+
+                                        <div id="respond">
+                                            <div class="v-contact-sign"><i class="icon-envelope-alt"></i></div>
+                                            <form id="contact" class="clearfix">
+                                                <div class="v-contact-options"><div class="v-contact-form-title">Name: <span>*</span></div><input name="name" class="left" type="text" placeholder="" value=""></div>
+                                                <div class="v-contact-options"><div class="v-contact-form-title">Email: <span>*</span></div><input name="mail" class="right" type="text" placeholder="" value=""></div>
+                                                <div class="v-contact-options"><div class="v-contact-form-title">Message: <span>*</span></div><textarea name="comment" placeholder=""></textarea></div>
+                                                <div id="msg" class="message"></div>
+                                                <div class="v-contact-button"><input id="submit" type="submit" value="Send"></div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+
+                                </div><!--/row-->
+                                
+                                
+                                
+                                <div class="clear"></div> 
+                            </div>
+                        </div> 
+                        
+                        
+                        
+                        
+                    </div><!--/row-->
+                </div><!--/container-->
+            </div><!--/home-wrap-->
+            
+               <div class="v-map">
+                <div id="map"></div>
+                <script type="text/javascript">
+                    jQuery(document).ready(function () {
+                    jQuery("#map").gmap3(
+                        { action:'addMarker',
+                            address:"москва, серпуховский вал, 26",
+                            map:{
+                            center:true,
+                            zoom:12,
+                            scrollwheel: false
+                            }})
+                    });
+                </script>
+            </div>
+            
     
-    <div class="span6">
-    <h1 style='height: 25px; text-align: right;'>И в чем смысл жизни?</h1>
-        <div class="well" style="background-color: #ade0ba; border: 1px solid #a0c0b0; height: 250px">
-            {{ home_reason|safe }}
-<!--            <ul>
-            {% for a in articles %}
-                <li>
-                    <a href="/article/{{ a.slug }}">{{ a.name }}</a> (<b>{{ a.date }}</b>)
-                </li>
-            {% endfor %}
-            </ul> -->
-        </div>
-    </div>
-</div>
+<!--footer-->
+<div id="footer-outer">
+	<div class="v-scroll-down"><div class="v-arrow-down scroll" data-to="v_footer_widgets"><i class="icon-chevron-down"></i></div></div>
+			
+	<div id="footer-widgets" class="v_footer_widgets">
+		
+		<div class="container">
+			
+			<div class="row">
+				
+				<div class="col span_6 one-fourths clear-both">
+                    <div id="" class="widget recent_posts_widget">  
+                        <h4>Последние посты</h4>  
+                    </div>
+				</div><!--/span_3-->
+				
+				<div class="col span_3 one-fourths clear-both">
+					 <!-- Footer widget area 3 -->
+                    <div id="" class="widget recent_posts_widget">        
+                        <h4>Категории</h4>       
+                        <ul>
+                            <li>
+                                <div class="post-widget-text">
+                                    <i class="icon-angle-right"></i>
+                                    <a href="#" title="From Amada">From Amada</a> 
+                                </div>
+                            </li>
+                                    <li>
+                                <div class="post-widget-text">
+                                    <i class="icon-angle-right"></i><a href="#" title="Hypercompact">Hypercompact</a> 
+                                </div>
+                            </li>
+                                    <li>
+                                <div class="post-widget-text">
+                                    <i class="icon-angle-right"></i><a href="#" title="MP3 Skin">MP3 Skin</a> 
+                                </div>
+                            </li>
+                                    <li>
+                                <div class="post-widget-text">
+                                    <i class="icon-angle-right"></i><a href="#" title="Jaime Lannister">Jaime Lannister</a> 
+                                </div>
+                            </li>
+                                    <li>
+                                <div class="post-widget-text">
+                                    <i class="icon-angle-right"></i><a href="#" title="Mobile Project">Mobile Project</a> 
+                                </div>
+                            </li>
+                        </ul>
+                    </div>                   
+					 
+					 
+                        
+				</div><!--/span_3-->
+				
+				<div class="col span_3 col_last one-fourths right-edge">
+					 <!-- Footer widget area 4 -->
+                    <div id="tag_cloud-2" class="widget widget_tag_cloud">
+                        <h4>Теги</h4>
+                        <div class="tagcloud">
+                                <a href="#" class="tag-link" title="1 topic">Music</a>
+                                <a href="#" class="tag-link" title="1 topic">new</a>
+                                <a href="#" class="tag-link" title="1 topic">outstanding</a>
+                                <a href="#" class="tag-link" title="1 topic">Quote</a>
+                                <a href="#" class="tag-link" title="1 topic">Shortcodes</a>
+                                <a href="#" class="tag-link" title="1 topic">web</a>
+                                <a href="#" class="tag-link" title="1 topic">Web App</a>
+                                <a href="#" class="tag-link" title="1 topic">Web Design</a>
+                                <a href="#" class="tag-link" title="1 topic">Wordpress</a>
+                        </div>
+                    </div>               
+				</div><!--/span_3-->
+				
+			</div><!--/row-->
+			
+		</div><!--/container-->
+	
+	</div><!--/footer-widgets-->
+	
+				<div class="v-footer-bottom">
+					<ul id="social">
+                        <li><a target="_blank" href="#" class="twitter"><i class="icon-twitter"></i></a></li>
+                        <li><a target="_blank" href="#" class="facebook"><i class="icon-facebook"></i></a></li> 						 
+                        <li><a target="_blank" href="#" class="pinterest"><i class="icon-pinterest"></i></a></li> 						 
+                        <li><a target="_blank" href="#" class="linkedin"><i class="icon-linkedin"></i></a></li> 						 
+                        <li><a target="_blank" href="#" class="google-plus"><i class="icon-google-plus"></i></a></li> 						 
+                        <li><a target="_blank" href="#" class="youtube"><i class="icon-youtube"></i></a></li> 						 
+                        <li><a target="_blank" href="#" class="rss"><i class="icon-rss"></i></a></li> 					
+					</ul>
+				</div>
 
-{% endblock %}
+		
+</div><!--/footer-outer-->
+
+	<a id="to-top"><i class="icon-angle-up"></i></a>
+
+</div>
+<!--  -->
+<script type="text/javascript" src="/static/js/superfish.js"></script>
+<script type="text/javascript" src="/static/js/easing.js"></script>
+<script type="text/javascript" src="/static/js/respond.js"></script>
+<script type="text/javascript" src="/static/js/prettyPhoto.js"></script>
+<script type="text/javascript" src="/static/js/flexslider.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.isotope.min.js"></script>
+<script type="text/javascript" src="/static/js/carouFredSel.min.js"></script>
+<script type="text/javascript" src="/static/js/jplayer.min.js"></script>
+<script type="text/javascript" src="/static/js/waypoints.min.js"></script>
+<script type="text/javascript" src="/static/js/waypoints-sticky.min.js"></script>
+<script type="text/javascript" src="/static/js/init.js"></script>
+<script type='text/javascript' src='http://maps.google.com/maps/api/js?sensor=false'></script>
+<script type='text/javascript' src='/static/js/gmap3.min.js'></script>
+
+</div>
+</body></html>

@@ -1,5 +1,8 @@
 django==1.4.2
-django-filebrowser==3.5.1
-pil==1.1.7
-django-taggit
+Pillow
+django-ckeditor==4.0.2
+sorl-thumbnail
+django-keyedcache
+django-admin-tools
 pytils
+django-livesettings

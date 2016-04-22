@@ -1,0 +1,20 @@
+#featured article .post-title a {
+    border: 2px solid #fff;
+}
+
+#featured article .post-title h2 {
+	background-color: #000;
+	padding: 10px;
+	margin-left: -10px;
+}
+
+#featured {
+	margin-top: -130px!important;
+}
+
+.single-portfolio #sidebar {
+	position: relative!important;
+	margin-left: 0px!important;
+	top: 0px!Important;
+	bottom: 0px!important;
+}

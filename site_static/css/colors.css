@@ -1,0 +1,95 @@
+
+body a {
+	color:#af0000;
+}
+
+#v-header-outer{
+	background:#FFFFFF;
+}
+
+
+header#top nav ul li a:hover, header#top nav .sf-menu li.sfHover > a, header#top nav .sf-menu li.current-menu-item > a,
+header#top nav .sf-menu li.current_page_item > a .sf-sub-indicator i, header#top nav .sf-menu li.current_page_ancestor > a .sf-sub-indicator i,
+header#top nav ul li a:hover, header#top nav .sf-menu li.sfHover > a, header#top nav .sf-menu li.current_page_ancestor > a, header#top nav .sf-menu li.current-menu-ancestor > a, header#top nav .sf-menu li.current_page_item > a,
+body header#top nav .sf-menu li.current_page_item > a .sf-sub-indicator [class^="icon-"], header#top nav .sf-menu li.current_page_ancestor > a .sf-sub-indicator [class^="icon-"],
+header#top nav .sf-menu li.current-menu-ancestor > a, header#top nav .sf-menu li.current_page_item > a, .sf-menu li ul li.sfHover > a .sf-sub-indicator [class^="icon-"], 
+ul.sf-menu > li > a:hover > .sf-sub-indicator i, ul.sf-menu > li > a:active > .sf-sub-indicator i, ul.sf-menu > li.sfHover > a > .sf-sub-indicator i,
+.sf-menu ul li.current_page_item > a , .sf-menu ul li.current-menu-ancestor > a, .sf-menu ul li.current_page_ancestor > a, .sf-menu ul a:focus ,
+.sf-menu ul a:hover, .sf-menu ul a:active, .sf-menu ul li:hover > a, .sf-menu ul li.sfHover > a, .sf-menu li ul li a:hover, .sf-menu li ul li.sfHover > a,
+#footer-outer a:hover, .recent-posts .post-header a:hover, article.post .post-header a:hover, article.result a:hover,  article.post .post-header h2 a, article.post .post-meta a:hover,
+.comment-list .comment-meta a:hover, label span, .wpcf7-form p span, .v_icon_large, .icon-3x[class^="icon-"], .icon-3x[class*=" icon-"], .circle-border, article.result .title a, .home .blog-recent .span_3 .post-header a:hover,
+.home .blog-recent .span_3 .post-header h3 a, #single-below-header a:hover, header#top #logo:hover, .sf-menu > li.current_page_ancestor > a > .sf-sub-indicator [class^="icon-"], .sf-menu > li.current-menu-ancestor > a > .sf-sub-indicator [class^="icon-"],
+body #mobile-menu li.open > a [class^="icon-"], .comment-author a:hover, .cbp_tmtimeline > li .cbp_tmtime span:last-child, .cbp_tmtimeline > li .cbp_tmtime span:first-child
+{	
+	color:#af0000!important;
+}
+
+.flex-direction-nav a, .portfolio-items .work-meta, #portfolio-filters a, #portfolio-filters #sort-portfolio,
+.container #portfolio-nav #all-items a, .project-attrs li span, .progress li span, #footer-outer #footer-widgets .col .tagcloud a:hover, #sidebar .widget .tagcloud a:hover, article.post .more-link span:hover,
+article.post.quote .post-content .quote-inner, article.post.link .post-content .link-inner, #pagination .next a:hover, #pagination .prev a:hover,
+.comment-list .reply a:hover, input[type=submit]:hover, .col:hover > [class^="icon-"].icon-3x, .col:hover > [class*=" icon-"].icon-3x,
+.col:hover [class^="icon-"].icon-3x, .col:hover a [class*=" icon-"].icon-3x, .toggle.open h3 a, .tabbed > ul li a, .bar_graph li span, .vaexu-button, #footer-outer #footer-widgets .col input[type="submit"],
+.blog-recent .more-link span:hover, .post-tags a:hover, #pagination a.page-numbers:hover,
+#pagination span.page-numbers.current, .cbp_tmtimeline::before, .cbp_tmtimeline > li .cbp_tmicon, .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel, .cbp_tmtimeline > li .cbp_tmlabel, #sidebar h4, #project-meta ul li span,
+.v-blog-area:before, .v-post-title-bg, .v-work-title-bg, .v-footer-bottom ul li a:hover i, [class^="icon-"], [class*=" icon-"], .jp-volume-bar, .jp-play-bar
+{
+	background-color:#af0000!important;
+}
+
+
+header#top nav ul li a, header#top #logo{
+	color:#444444;
+}
+
+header#top nav ul li a:hover, header#top #logo:hover, header#top nav .sf-menu li.sfHover > a, header#top nav .sf-menu li.current_page_ancestor > a, header#top nav .sf-menu li.current-menu-item > a, header#top nav .sf-menu li.current-menu-ancestor > a, header#top nav .sf-menu li.current_page_item > a{
+	color:#af0000 !important;
+}
+
+.v_icon_large{
+	box-shadow: 0 0 0 4px #af0000 !important;
+}
+
+#to-top i{
+	border: 2px solid #af0000;
+	color:#af0000;
+}
+
+#to-top:hover#to-top i{
+	background: #af0000 !important;
+}
+
+#footer-outer, .v-arrow-down{
+	background:#2E3133;
+}
+
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel::after, .cbp_tmtimeline > li .cbp_tmlabel::after
+{
+	border-right-color:#af0000;
+}
+
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel::after, .cbp_tmtimeline > li .cbp_tmlabel::after
+{
+	border-top-color:#af0000;
+} 
+
+.col:hover .circle-border, body .recent_projects_widget a:hover img, .recent_projects_widget a:hover img, #sidebar #flickr a:hover img, 
+#footer-outer #flickr a:hover img, #featured article .post-title a:hover, body #featured article .post-title a:hover {
+	border-color:#af0000;
+}
+
+.gallery a:hover img {
+	border-color:#af0000!important;
+}
+
+
+@media only screen 
+and (min-width : 1px) and (max-width : 1000px) {
+	
+	body #featured article .post-title a {
+		background-color:#af0000;
+	}
+	
+	body #featured article .post-title a {
+		border-color:#af0000;
+	}
+}
